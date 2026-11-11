@@ -1,0 +1,75 @@
+/* Navbar: gray, bold brand */
+.navbar-default {
+  background-color: #999;
+  border-color: #333;
+}
+
+.navbar-default .navbar-brand {
+  color: #222;
+  font-weight: bold;
+}
+
+/* Hamburger button */
+.navbar-default .navbar-toggle {
+  border-color: #222;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #222;
+}
+
+/* Dropdown menu: distinct background, full width, centered bordered rows */
+.navbar-collapse {
+  background-color: #eee;
+  padding: 0;
+}
+
+.navbar-collapse .navbar-nav {
+  margin: 0;
+}
+
+.navbar-collapse .navbar-nav > li > a {
+  color: #222;
+  text-align: center;
+  border: 1px solid #222;
+}
+
+/* Tall section: forces the page to scroll */
+.tall-section {
+  height: 1000px;
+  background-color: #999;
+}
+
+/* ---- Animations (CSS only) ---- */
+
+/* Heading fades and slides in once on page load */
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#top {
+  animation: fade-in-down 0.8s ease-out;
+}
+
+/* Mobile menu items change color smoothly on hover/tap */
+.navbar-collapse .navbar-nav > li > a {
+  transition: background-color 0.25s ease;
+}
+
+.navbar-collapse .navbar-nav > li > a:hover,
+.navbar-collapse .navbar-nav > li > a:focus {
+  background-color: #ffe9a8;
+}
+
+/* Menu links scroll smoothly instead of jumping */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect people who turn off motion */
+@media (prefers-reduced-motion: reduce) {
+  #top { animation: none; }
+  html { scroll-behavior: auto; }
+  .navbar-collapse .navbar-nav > li > a { transition: none; }
+}
