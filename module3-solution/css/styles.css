@@ -20,8 +20,13 @@
 
 /* Dropdown menu: distinct background, full width, centered bordered rows */
 .navbar-collapse {
-  background-color: #eee;
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #eee;
+  }
 }
 
 .navbar-collapse .navbar-nav {
