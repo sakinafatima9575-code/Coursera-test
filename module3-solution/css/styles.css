@@ -1,32 +1,38 @@
-/* Navbar: gray, bold brand */
+/* ---------- Navbar ---------- */
 .navbar-default {
   background-color: #999;
-  border-color: #333;
+  border: 2px solid #222;
+  border-radius: 0;
 }
 
 .navbar-default .navbar-brand {
-  color: #222;
+  color: #111;
+  font-size: 24px;
   font-weight: bold;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #111;
 }
 
 /* Hamburger button */
 .navbar-default .navbar-toggle {
-  border-color: #222;
+  border: 2px solid #222;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ccc;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #222;
 }
 
-/* Dropdown menu: distinct background, full width, centered bordered rows */
+/* ---------- Mobile dropdown ---------- */
 .navbar-collapse {
   padding: 0;
-}
-
-@media (max-width: 767px) {
-  .navbar-collapse {
-    background-color: #eee;
-  }
 }
 
 .navbar-collapse .navbar-nav {
@@ -34,20 +40,73 @@
 }
 
 .navbar-collapse .navbar-nav > li > a {
-  color: #222;
+  color: #111;
+  font-weight: bold;
   text-align: center;
-  border: 1px solid #222;
+  border-top: 1px solid #222;
+  transition: background-color 0.25s ease;
 }
 
-/* Tall section: forces the page to scroll */
-.tall-section {
-  height: 1000px;
-  background-color: #999;
+.navbar-collapse .navbar-nav > li > a:hover,
+.navbar-collapse .navbar-nav > li > a:focus {
+  background-color: #ffd54f;
+  color: #111;
 }
 
-/* ---- Animations (CSS only) ---- */
+/* Distinct background, phone size only (so desktop navbar stays gray) */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #ffe9a8;
+  }
+}
 
-/* Heading fades and slides in once on page load */
+/* ---------- Page heading ---------- */
+h1 {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+/* ---------- Menu sections ---------- */
+.menu-section {
+  background-color: #a8a8a8;
+  border: 2px solid #222;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+  min-height: 900px;
+}
+
+.menu-section h3 {
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.menu-section h4 {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+.menu-section p {
+  line-height: 1.7;
+}
+
+.menu-section .intro {
+  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #222;
+}
+
+.menu-section a {
+  display: inline-block;
+  margin-top: 25px;
+  color: #111;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ---------- Animations (CSS only) ---------- */
 @keyframes fade-in-down {
   from { opacity: 0; transform: translateY(-15px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -57,22 +116,10 @@
   animation: fade-in-down 0.8s ease-out;
 }
 
-/* Mobile menu items change color smoothly on hover/tap */
-.navbar-collapse .navbar-nav > li > a {
-  transition: background-color 0.25s ease;
-}
-
-.navbar-collapse .navbar-nav > li > a:hover,
-.navbar-collapse .navbar-nav > li > a:focus {
-  background-color: #ffe9a8;
-}
-
-/* Menu links scroll smoothly instead of jumping */
 html {
   scroll-behavior: smooth;
 }
 
-/* Respect people who turn off motion */
 @media (prefers-reduced-motion: reduce) {
   #top { animation: none; }
   html { scroll-behavior: auto; }
