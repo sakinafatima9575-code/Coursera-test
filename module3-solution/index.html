@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Food, LLC</title>
+  <title>Food, LLC - Our Menu</title>
 
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Your own CSS -->
+  <!-- Our own CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,9 +17,10 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
+        <!-- Hamburger button: Bootstrap shows it only below 768px -->
         <button type="button" class="navbar-toggle collapsed"
                 data-toggle="collapse" data-target="#menu-dropdown"
-                aria-expanded="false">
+                aria-expanded="false" aria-controls="menu-dropdown">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -28,6 +29,7 @@
         <a class="navbar-brand" href="#">Food, LLC</a>
       </div>
 
+      <!-- Dropdown: visible on phones only -->
       <div class="collapse navbar-collapse" id="menu-dropdown">
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#chicken">Chicken</a></li>
@@ -38,15 +40,82 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container-fluid">
     <h1 id="top" class="text-center">Our Menu</h1>
 
     <div class="row">
-      <div class="col-xs-12 tall-section">
-        <h3 id="chicken" class="text-center">Chicken</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- Chicken -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <section id="chicken" class="menu-section">
+          <h3 class="text-center">Chicken</h3>
+          <p class="intro">Free-range chicken, marinated overnight and cooked to order. Every dish is made with fresh herbs and spices, never frozen meat.</p>
+
+          <h4>Lemon-Herb Grilled Chicken</h4>
+          <p>A juicy chicken breast marinated in lemon, garlic and rosemary, flame-grilled and served with roasted vegetables and herbed rice.</p>
+
+          <h4>Crispy Fried Chicken</h4>
+          <p>Golden, crunchy pieces coated in our secret blend of eleven spices, served with coleslaw, warm cornbread and honey-chili dipping sauce.</p>
+
+          <h4>Butter Chicken</h4>
+          <p>Tender chicken simmered in a creamy tomato and butter sauce with mild spices, served with fluffy basmati rice or fresh naan bread.</p>
+
+          <h4>Chicken Biryani</h4>
+          <p>Fragrant long-grain rice layered with spiced chicken, caramelized onions, saffron and mint, served with cool cucumber yogurt.</p>
+
+          <a href="#top">Back to Top</a>
+        </section>
       </div>
+
+      <!-- Beef -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <section id="beef" class="menu-section">
+          <h3 class="text-center">Beef</h3>
+          <p class="intro">Premium cuts from trusted farms, aged for tenderness and cooked exactly the way you like it, from rare to well done.</p>
+
+          <h4>Grilled Ribeye Steak</h4>
+          <p>A thick, marbled ribeye seared over open flame and finished with garlic butter. Served with creamy mashed potatoes and grilled asparagus.</p>
+
+          <h4>Classic Beef Burger</h4>
+          <p>A thick patty of freshly ground beef with melted cheddar, crisp lettuce, tomato and pickles on a toasted brioche bun, served with golden fries.</p>
+
+          <h4>Slow-Cooked Beef Stew</h4>
+          <p>Beef shoulder braised for four hours with carrots, potatoes and red wine until it melts in your mouth. A hearty, comforting favorite.</p>
+
+          <h4>Beef Stir-Fry</h4>
+          <p>Thin strips of beef tossed in a hot wok with peppers, broccoli and ginger-soy sauce, served over steamed jasmine rice.</p>
+
+          <a href="#top">Back to Top</a>
+        </section>
+      </div>
+
+      <!-- Sushi -->
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <section id="sushi" class="menu-section">
+          <h3 class="text-center">Sushi</h3>
+          <p class="intro">Made fresh throughout the day by our sushi chefs using seasoned rice, crisp nori and the freshest fish and vegetables.</p>
+
+          <h4>Salmon Nigiri</h4>
+          <p>Two slices of buttery Atlantic salmon pressed over hand-shaped sushi rice with a touch of wasabi. Simple, clean and classic.</p>
+
+          <h4>California Roll</h4>
+          <p>Crab, avocado and cucumber rolled inside-out in sesame-coated rice. A mild, creamy roll that is perfect for first-time sushi lovers.</p>
+
+          <h4>Spicy Tuna Roll</h4>
+          <p>Fresh tuna mixed with chili mayo and green onion, rolled with cucumber and topped with crunchy tempura flakes.</p>
+
+          <h4>Garden Veggie Roll</h4>
+          <p>Avocado, cucumber, carrot and pickled radish wrapped in nori and rice. A light, fresh vegetarian option served with soy sauce and pickled ginger.</p>
+
+          <a href="#top">Back to Top</a>
+        </section>
+      </div>
+
     </div>
   </div>
 
-  <script
+  <!-- jQuery, then Bootstrap JS (needed for the menu button) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
